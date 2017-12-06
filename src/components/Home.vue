@@ -29,20 +29,12 @@
 export default {
   data () {
     return {
-      carouselItems: [
-        {
-          src: 'https://s.aficionados.com.br/imagens/dragon-ball-superamv-son-goku-vs_cke.jpg',
-          description: 'goku-black'
-        },
-        {
-          src: 'https://pm1.narvii.com/6528/a582bc06fdacbb1ed3a71dfe41f5e1cb5433e188_hq.jpg',
-          description: 'freeza'
-        },
-        {
-          src: 'https://i.ytimg.com/vi/4K4MWStX9ks/hqdefault.jpg',
-          description: 'majin-boo'
-        }
-      ]
+      // carouselItems: []
+    }
+  },
+  computed: {
+    carouselItems () {
+      return this.$store.getters.loadedRecentMeetups
     }
   }
 }
